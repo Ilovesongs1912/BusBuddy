@@ -1,0 +1,30 @@
+body {
+    font-family: Papyrus, fantasy;
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+
+nav a {
+    margin-left: 40px;
+    text-decoration: none;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+}
