@@ -43,7 +43,7 @@ header h1 img {
 
 
 
-/* Navigation */
+/*the buttons to go to other websites yipepeppepe*/
 nav a {
     margin-left: 40px;
     text-decoration: none;
@@ -77,12 +77,13 @@ nav a:hover {
 }
 
 
-/* Profile Box */
+/* login area */
 .profile-box {
 
     background-color: #84abe6;
 
-    width: 350px;
+    width: 100%;
+    max-width: 600px;
 
     margin: 40px auto;
 
@@ -129,7 +130,7 @@ input:focus {
 }
 
 
-/* Buttons */
+/* Pretty button */
 button {
 
     padding: 15px 30px;
