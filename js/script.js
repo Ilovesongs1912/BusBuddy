@@ -1,27 +1,27 @@
-console.log("JavaScript is connected!");
+console.log("JavaScript connected!");
 
-function login() {
-    console.log("LOGIN BUTTON WAS CLICKED!");
-    alert("Button works!");
+
+function createProfile(){
+
+    let username = document.getElementById("username").value;
+
+    let profileLock = document.getElementById("profileLock").value;
+
+
+    if(username === "" || profileLock === ""){
+
+        alert("Please enter your username and password!");
+
+    }
+
+    else{
+
+        localStorage.setItem("username", username);
+        localStorage.setItem("profileLock", profileLock);
+
+
+        alert("Welcome to BusBuddy, " + username + "!");
+
+    }
+
 }
-
-let username =
-document.getElementById("username").value;
-
-
-let password =
-document.getElementById("password").value;
-
-
-if(username === "" || password === ""){
-
-alert("Please fill in everything!");
-
-}
-
-else{
-
-alert("Welcome " + username);
-
-}
-
