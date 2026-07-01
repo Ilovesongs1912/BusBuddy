@@ -1,32 +1,158 @@
 body {
-    font-family: Trebuchet MS, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
+    background-color: #f8ecde;
+    color: #333;
 }
 
 
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+
+    padding: 30px 50px;
+
+    background-color: #84abe6;
+    color: #FFF0F5;
+
+
+}   
+
+
+
+
+
+
+   header h1 {
+    margin: 0;
+    font-size: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 
+header h1 img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+
+/* Navigation */
 nav a {
     margin-left: 40px;
     text-decoration: none;
+    color: #ffffff;
+    font-size: 25px;
 }
 
 
+nav a:hover {
+    color: #ffd54f;
+}
+
+
+/* Main Hero Section */
 .hero {
+
     text-align: center;
-    padding: 100px 20px;
+    padding: 80px 20px;
+
 }
 
 
-button {
-    padding: 15px 30px;
+.hero h2 {
+    font-size: 40px;
+    color: #1565c0;
+}
+
+
+.hero p {
     font-size: 20px;
+}
+
+
+/* Profile Box */
+.profile-box {
+
+    background-color: #84abe6;
+
+    width: 350px;
+
+    margin: 40px auto;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
+
+}
+
+
+.profile-box h3 {
+
+    color: #1565c0;
+
+}
+
+
+/* Input Boxes */
+input {
+
+    width: 85%;
+
+    padding: 12px;
+
+    margin: 10px;
+
+    border-radius: 8px;
+
+    border: 2px solid #ddd;
+
+    font-size: 16px;
+
+}
+
+
+input:focus {
+
+    border-color: #1565c0;
+
+    outline: none;
+
+}
+
+
+/* Buttons */
+button {
+
+    padding: 15px 30px;
+
+    font-size: 18px;
+
+    background-color: #FF4D6D;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background-color: #d9365a;
+
 }
 
 

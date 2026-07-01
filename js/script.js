@@ -10,7 +10,7 @@ function createProfile(){
 
     if(username === "" || profileLock === ""){
 
-        alert("Please enter your username and password!");
+        alert("Please enter your username and password first!");
 
     }
 
