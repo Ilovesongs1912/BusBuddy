@@ -1,159 +1,392 @@
+/* ===================================================
+   Fonts
+=================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     background-color: #f8ecde;
     color: #333;
 }
 
 
-/* Header */
+/* ===================================================
+   Header
+=================================================== */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 30px 50px;
+    padding: 25px 60px;
 
     background-color: #84abe6;
     color: #FFF0F5;
+}
 
-
-}   
-
-
-
-
-
-
-   header h1 {
+header h1 {
     margin: 0;
-    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
 
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 12px;
 }
-
 
 header h1 img {
-    width: 150px;
-    height: 150px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
+    border-radius: 50%;
 }
 
 
+/* Nav links */
+nav {
+    display: flex;
+    align-items: center;
+}
 
-/*the buttons to go to other websites yipepeppepe*/
 nav a {
-    margin-left: 40px;
+    margin-left: 30px;
     text-decoration: none;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
-
 
 nav a:hover {
     color: #ffd54f;
 }
 
-
-/* Main Hero Section */
-.hero {
-
-    text-align: center;
-    padding: 80px 20px;
-
+/* Pill "Login" style button in nav, optional use: <a class="nav-cta"> */
+nav a.nav-cta {
+    background-color: #FF4D6D;
+    color: #ffffff;
+    padding: 10px 24px;
+    border-radius: 30px;
 }
 
+nav a.nav-cta:hover {
+    background-color: #d9365a;
+    color: #ffffff;
+}
+
+
+/* ===================================================
+   Hero Section
+=================================================== */
+.hero {
+    padding: 60px 60px 80px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* --- Left side: george's side--- */
+.hero-left {
+    text-align: left;
+    padding-top: 40px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #5c82bb;
+    margin-bottom: 10px;
+}
 
 .hero h2 {
-    font-size: 40px;
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 600;
     color: #1565c0;
+    letter-spacing: 0.5px;
+    margin: 0 0 15px 0;
+    line-height: 1.2;
+}
+
+.hero-left > p {
+    font-size: 17px;
+    color: #555;
+    font-weight: 300;
+    max-width: 420px;
+}
+
+.switch-link-inline {
+    margin-top: 25px;
+}
+
+.switch-link-inline a {
+    color: #FF4D6D;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.switch-link-inline a:hover {
+    text-decoration: underline;
+}
+
+/* Promo image card under the headline */
+.promo-card {
+    position: relative;
+    margin-top: 45px;
+    width: 100%;
+    max-width: 380px;
+    height: 260px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #a2cdff, #5c82bb);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.promo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.promo-overlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(0deg, rgba(0,0,0,0.55), rgba(0,0,0,0));
+    color: #fff;
+}
+
+.promo-overlay h4 {
+    margin: 0 0 5px 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+}
+
+.promo-overlay p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 
-.hero p {
-    font-size: 20px;
+/* --- Right side: big image with login card on top --- */
+.hero-right {
+    position: relative;
+    min-height: 560px;
+}
+
+.hero-image {
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #84abe6, #1565c0);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.hero-right .profile-box {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    margin: 0;
+    z-index: 2;
+}
+
+.hero-right .profile-box:hover {
+    transform: translateY(calc(-50% - 5px));
 }
 
 
-/* login area */
+/* Responsive: stack columns on smaller screens */
+@media (max-width: 900px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-right {
+        min-height: 0;
+    }
+
+    .hero-image {
+        height: 320px;
+    }
+
+    .hero-right .profile-box {
+        position: static;
+        transform: none;
+        margin-top: 25px;
+    }
+
+    .hero-right .profile-box:hover {
+        transform: translateY(-5px);
+    }
+}
+
+
+/* ===================================================
+   Sign Up / Login Cards
+=================================================== */
+.account-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
 .profile-box {
-
     background-color: #84abe6;
 
     width: 100%;
-    max-width: 600px;
+    max-width: 380px;
+    min-height: auto;
 
-    margin: 40px auto;
+    margin: 0;
+    padding: 40px 35px;
 
-    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 
-    border-radius: 15px;
+    text-align: left;
 
-    box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
-
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.profile-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+}
 
 .profile-box h3 {
+    font-family: 'Playfair Display', serif;
+    background-color: #a2cdff;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
 
-    color: #1565c0;
-
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin: 0 0 25px 0;
+    width: auto;
+    text-align: center;
 }
 
 
-/* Input Boxes */
-input {
-
-    width: 85%;
-
-    padding: 12px;
-
-    margin: 10px;
-
-    border-radius: 8px;
-
-    border: 2px solid #ddd;
-
-    font-size: 16px;
-
+/* ===================================================
+   Labels & Inputs
+=================================================== */
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
+input,
+select {
+    width: 100%;
+    padding: 10px 2px;
+    margin: 0;
 
-input:focus {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #5c82bb;
+    border-radius: 0;
 
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+
+    transition: border-color 0.2s ease;
+}
+
+select {
+    padding: 10px 2px;
+    cursor: pointer;
+}
+
+input:focus,
+select:focus {
     border-color: #1565c0;
-
     outline: none;
+}
 
+input::placeholder {
+    color: #7a93b8;
+    font-weight: 400;
 }
 
 
-/* Pretty button */
+/* ===================================================
+   Buttons
+=================================================== */
 button {
-
+    width: 100%;
     padding: 15px 30px;
+    margin-top: 30px;
 
     font-size: 18px;
 
     background-color: #FF4D6D;
-
     color: white;
 
     border: none;
-
-    border-radius: 10px;
-
+    border-radius: 30px;
     cursor: pointer;
 
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
 
 button:hover {
-
     background-color: #d9365a;
-
+    transform: scale(1.05);
 }
 
+
+/* ===================================================
+   Switch link (Log in <-> Sign up)
+=================================================== */
+.switch-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #000;
+}
+
+.switch-link a {
+    color: #FF4D6D;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.switch-link a:hover {
+    text-decoration: underline;
+}
 

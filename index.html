@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BusBuddy</title>
 
-    
-
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,56 +15,97 @@
 <header>
 
     <h1>
-        <img src="bus2.jpg" alt="BusBuddy logo" width="200">
+        <img src="bus2.jpg" alt="BusBuddy logo">
         BusBuddy
     </h1>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="accounts.html">Accounts</a>
+        <a href="signup.html">Sign Up</a>
     </nav>
 
 </header>
 
 
-<main>
+
+
+  <main>
 
     <section class="hero">
 
-        <h2>Welcome to BusBuddy</h2>
+        <div class="hero-grid">
 
-        <p>
-            Offering stability for your daily commute.
-        </p>
+            
+            <div class="hero-left">
 
+                <p class="eyebrow">Travel Made Simple</p>
 
-        <div class="profile-box">
+                <h2>Welcome Back</h2>
 
-            <h3>Create Your Profile</h3>
+                <p>
+                    Log in to BusBuddy and pick up right where you left off.
+                </p>
 
-            <input 
-                type="text" 
-                id="username" 
-                placeholder="Enter username"
-            >
+                <p class="switch-link-inline">
+                    Don't have an account?
+                    <a href="signup.html">Create account &rarr;</a>
+                </p>
 
-            <input 
-                type="password" 
-                id="profileLock" 
-                placeholder="Create a password"
-            >
+                <div class="promo-card">
+                    <img src="George_Pig.jpg" alt="Passenger boarding a bus">
+                    <div class="promo-overlay">
+              
+                    </div>
+                </div>
 
+            </div>
 
-            <button onclick="createProfile()">
-                Get Started!
-            </button>
+            
+            <div class="hero-right">
+
+                <img src="peppa.jpg" class="hero-image" alt="BusBuddy travel">
+
+                <!-- Login Card -->
+
+                <div class="profile-box">
+
+                    <h3>Log In</h3>
+
+                    <label for="loginUsername">Username</label>
+
+                    <input
+                    type="text"
+                    id="loginUsername"
+                    placeholder=""
+                    >
+
+                    <label for="loginPassword">Password</label>
+
+                    <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder=""
+                    >
+
+                    <button onclick="login()">
+                    Log In
+                    </button>
+
+                    <p class="switch-link">
+                        Don't have an account? <a href="signup.html">Create one</a>
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 
-
-    </section>
+</section>
 
 </main>
+
 
 
 <script src="js/script.js"></script>
