@@ -1,37 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Accounts</title>
- 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusBuddy - Accounts</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <h1>Account heh</h1>
-       <main>
 
-    <section class="hero">
+<header>
 
-        <div class="profile-box">
+    <h1>
+        <img src="bus2.jpg" alt="BusBuddy logo">
+        BusBuddy
+    </h1>
 
-            <h2> My Account</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="accounts.html">Accounts</a>
+        <a href="signup.html">Sign Up</a>
+    </nav>
 
-            <p><strong>Welcome back!</strong></p>
+</header>
 
-            <p>
-                Username:
-                <span id="displayUsername"></span>
-            </p>
+<main>
 
-            <p>
-                Preferred Language:
-                <span id="displayLanguage"></span>
-            </p>
+    <section class="dashboard">
 
-            <button onclick="logout()">
-                Log Out
-            </button>
+        <!-- Hehehehe Fake add money, and account info.-->
+        <div class="dashboard-top">
+
+            <div class="dashboard-user">
+                <div class="avatar-circle" id="avatarInitial"></div>
+                <div>
+                    <p class="dashboard-username" id="displayUsername"></p>
+                    <p class="dashboard-balance">Balance: <span id="displayBalance">RM 0.00</span></p>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <button class="btn-pill btn-pill-outline" onclick="addMoney()">Add Money</button>
+                <button class="btn-pill btn-pill-dark" onclick="onDemand()">On-Demand</button>
+            </div>
 
         </div>
+
+        <!-- Bus schedule (Not completed yet, still considering which one to choose.)-->
+        <div class="panel-box">
+            <h3 class="panel-title">Bus Schedule & Bus Arrival Times </h3>
+            <div class="timeline" id="stopsTimeline">
+                <!-- filled in by accounts.js -->
+            </div>
+        </div>
+
+        <!-- using malaysia api for this one. Also not comfirmed.-->
+        <div class="panel-box">
+            <h3 class="panel-title">Live Tracking</h3>
+
+            <div class="tracking-box">
+                <img src="Gps.jpg" alt="Bus route map" class="tracking-image">
+            </div>
+
+            <p class="tracking-eta" id="trackingEta">Arriving in 6 min</p>
+        </div>
+
+        <button class="btn-pill btn-pill-outline logout-btn" onclick="logout()">Log Out</button>
 
     </section>
 

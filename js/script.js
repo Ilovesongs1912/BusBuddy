@@ -1,36 +1,39 @@
 function createAccount() {
 
 
-    // User input
+    // user input!!
     let username = document.getElementById("newUsername").value;
     let password = document.getElementById("newPassword").value;
     let language = document.getElementById("language").value;
 
-    // If it was filled inornot (in local storage)
+    // checking if all the fields are filled out
     if (username === "" || password === "") {
         alert("Please fill in all fields.");
         return;
     }
 
-    // localstorage!!!!!!
+    // localstorage for thw iwn
     localStorage.setItem("username", username);
     localStorage.setItem("password", password);
     localStorage.setItem("language", language);
 
     alert("Account created successfully!");
+
+    // Redirects to account page
+    window.location.href = "accounts.html";
 }
 
 function login() {
 
-    // User input
+    // Get what the user typed
     let username = document.getElementById("loginUsername").value;
     let password = document.getElementById("loginPassword").value;
 
-    // Checking localstorage for inputted username and pass (aka the user input)
+    // Get the saved account
     let savedUsername = localStorage.getItem("username");
     let savedPassword = localStorage.getItem("password");
 
-    // Cheks if it matches the one inputted by the user
+    // Check if they match
     if (username === savedUsername && password === savedPassword) {
 
         alert("Login successful!");
