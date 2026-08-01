@@ -37,6 +37,7 @@
                 <div>
                     <p class="dashboard-username" id="displayUsername"></p>
                     <p class="dashboard-balance">Balance: <span id="displayBalance">RM 0.00</span></p>
+                    <p>Language: <span id="displayLanguage"></span></p>
                 </div>
             </div>
 
@@ -52,6 +53,12 @@
             <h3 class="panel-title">Bus Schedule & Bus Arrival Times </h3>
             <div class="timeline" id="stopsTimeline">
                 <!-- filled in by accounts.js -->
+
+                <label for="stopSelect">Choose Your Preffered Bus Stop</label>
+
+                <select id="stopSelect">
+                <option>Loading bus stops...</option>
+              </select>
             </div>
         </div>
 
@@ -71,7 +78,8 @@
     </section>
 
 </main>
-
+<script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+<script src="js/gtfs.js"></script>
 <script src="js/accounts.js"></script>
 </body>
 </html>

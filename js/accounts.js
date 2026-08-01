@@ -19,3 +19,25 @@ function logout() {
     window.location.href = "index.html";
 
 }
+
+window.onload = async function () {
+
+    const stops = await loadStops();
+
+    const stopSelect = document.getElementById("stopSelect");
+
+    stopSelect.innerHTML = "";
+
+    stops.forEach(stop => {
+
+        const option = document.createElement("option");
+
+        option.value = stop.stop_id;
+
+        option.textContent = stop.stop_name;
+
+        stopSelect.appendChild(option);
+
+    });
+
+};

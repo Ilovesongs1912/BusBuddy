@@ -395,7 +395,7 @@ button:hover {
    Accounts Dashboard
 =================================================== */
 .dashboard {
-    max-width: 900px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 50px 30px 80px;
 }
@@ -565,7 +565,7 @@ button:hover {
 .tracking-box {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 250px;
     background: linear-gradient(135deg, #f8ecde, #eaf1fb);
     border-radius: 15px;
     overflow: hidden;
