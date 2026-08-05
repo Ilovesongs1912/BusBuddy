@@ -48,17 +48,23 @@
 
         </div>
 
-        <!-- Bus schedule (Not completed yet, still considering which one to choose.)-->
+        <!-- Bus schedule -->
         <div class="panel-box">
-            <h3 class="panel-title">Bus Schedule & Bus Arrival Times </h3>
-            <div class="timeline" id="stopsTimeline">
-                <!-- filled in by accounts.js -->
+            <h3 class="panel-title">Bus Schedule &amp; Bus Arrival Times</h3>
 
-                <label for="stopSelect">Choose Your Preffered Bus Stop</label>
+            <label for="stopSearch">Search for your bus stop</label>
 
-                <select id="stopSelect">
-                <option>Loading bus stops...</option>
-              </select>
+            <input
+                type="text"
+                id="stopSearch"
+                list="stopOptions"
+                placeholder="Start typing a bus stop name..."
+                autocomplete="off"
+            >
+            <datalist id="stopOptions"></datalist>
+
+            <div id="arrivalTimes">
+                <p>Select a bus stop to see the scheduled arrivals!</p>
             </div>
         </div>
 

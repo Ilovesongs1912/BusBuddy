@@ -395,7 +395,7 @@ button:hover {
    Accounts Dashboard
 =================================================== */
 .dashboard {
-    max-width: 1250px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 50px 30px 80px;
 }
@@ -468,23 +468,23 @@ button:hover {
 }
 
 .btn-pill-dark {
-    background-color: #FF4D6D;
+    background-color: #1565c0;
     color: #fff;
 }
 
 .btn-pill-dark:hover {
-    background-color: #ca2f4c;
+    background-color: #0d47a1;
     transform: scale(1.05);
 }
 
 .btn-pill-outline {
     background-color: transparent;
-    color: #FF4D6D;
-    border: 2px solid #FF4D6D;
+    color: #1565c0;
+    border: 2px solid #1565c0;
 }
 
 .btn-pill-outline:hover {
-    background-color: #FF4D6D;
+    background-color: #1565c0;
     color: #fff;
     transform: scale(1.05);
 }
@@ -565,7 +565,7 @@ button:hover {
 .tracking-box {
     position: relative;
     width: 100%;
-    height: 250px;
+    height: 200px;
     background: linear-gradient(135deg, #f8ecde, #eaf1fb);
     border-radius: 15px;
     overflow: hidden;
@@ -602,4 +602,58 @@ button:hover {
     .btn-pill {
         flex: 1;
     }
+}
+
+
+/* ===================================================
+   Bus Stop Search + Arrivals Table
+=================================================== */
+#stopSearch {
+    max-width: 400px;
+}
+
+#arrivalTimes {
+    margin-top: 25px;
+}
+
+#arrivalTimes p {
+    color: #777;
+    font-size: 15px;
+}
+
+.arrivals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.arrivals-table thead th {
+    background-color: #a2cdff;
+    color: #000;
+    text-align: left;
+    padding: 12px 15px;
+    font-weight: bold;
+}
+
+.arrivals-table thead th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.arrivals-table thead th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.arrivals-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.arrivals-table tbody tr:hover {
+    background-color: #f8ecde;
+}
+
+.arrivals-table tbody tr:last-child td {
+    border-bottom: none;
 }
